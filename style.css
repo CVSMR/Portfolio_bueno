@@ -108,6 +108,7 @@ h1 {
 h2{
     text-align: center;
     margin-bottom: 60px;
+    font-size: 50px;
 }
 
 .img_Est{
@@ -135,8 +136,26 @@ h2{
     padding: 20px;
     border-radius: 5%;
     background-color: rgb(231, 176, 26);;
+    width: 270px;
+    height: 400px;
 }
 
 .text {
     border-top: 5px solid rgb(88, 88, 208);
+    padding: 5px;
+}
+.text a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.text button{
+    
+    height: 35px;
+    background-color: rgb(68, 68, 184);
+    margin-top: 10px;
+}
+.text button:hover{
+    background-color: rgb(81, 81, 255);
+    box-shadow: 5px 5px 5px rgb(44, 44, 43);
+    
 }
