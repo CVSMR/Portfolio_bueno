@@ -11,7 +11,7 @@ function mostrarMenu() {
 
 //Cambio de imagen del menu
 var iconoNormal = "./recursos/Icono.png";
-var iconoHover = "./recursos/Icono2.jpg";
+var iconoHover = "./recursos/Icono2bueno.png";
 
 
 var iconoElement = document.getElementById("icono");
