@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #282c34; /* Fondo oscuro para resaltar el tablero */
+    color: aliceblue; /* Color de texto blanco */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.tablero {
+    background-color: aqua;
+    width: 43vw;
+    height: 43vw;
+    display: grid; /* Usando CSS Grid para la cuadrícula */
+    grid-template-columns: repeat(9, 1fr); /* 9 columnas iguales */
+    grid-template-rows: repeat(9, 1fr); /* 9 filas iguales */
+    gap: 2px; /* Espacio entre las celdas */
+}
+
+.pos {
+    background-color: rgb(28, 214, 152);
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.snake {
+    background-color: rgba(255, 179, 0,0.85);
+}
+
+.fruta {
+    position: relative;
+}
+
+.fruta::after {
+    content: '🍎';
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.head-snake{
+    background-color: rgb(255, 179, 0);
+}
+.Inicar{
+    color: aliceblue;
+    margin-top: 1.5vw;
+    background-color: #282c34;
+    margin-bottom: 1.5vh;
+}
+.Inicar:hover{
+    background-color: #646465;
+
+}
+.contenedor{
+    position: relative;
+    left: -43vw;
+    height: 100%;
+
+}

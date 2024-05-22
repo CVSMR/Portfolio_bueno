@@ -65,14 +65,14 @@ html {
 
 #menu ul li {
     visibility: visible;
-    margin-right: 55px;
+    margin-right: 20px;
     display: inline;
     font-size: 30px;
     border: 3px solid rgb(44, 44, 163);
-
     border-radius: 25%;
     padding: 10px 20px;
     text-align: center;
+    cursor: pointer;
 }
 
 #menu ul li a {
@@ -90,10 +90,11 @@ h1 {
     font-size: 75px;
     text-align: center;
     font-family: 'Oswald';
-    
+
 }
 
-#Sobre_mi  {
+/*Parte del Sobre Mi*/
+#Sobre_mi {
     margin-top: 30px;
     text-align: center;
     font-size: 40px;
@@ -102,21 +103,22 @@ h1 {
 
 }
 
-#Estudios{
+#Estudios {
     margin-top: 50px;
 }
-h2{
+
+h2 {
     text-align: center;
     margin-bottom: 60px;
     font-size: 50px;
 }
 
-.img_Est{
+.img_Est {
     width: 175px;
     height: 250px;
     margin-top: 10px;
     margin-bottom: 10px;
-    
+
 }
 
 .conjs {
@@ -124,18 +126,20 @@ h2{
     flex-direction: row;
     justify-content: center;
     margin-top: 15px;
-    gap: 50px;
+    gap: 15vh;
     color: rgb(255, 255, 255);
     font-weight: 900;
-    
-    
+
+
 }
-.conj{
+
+.conj {
     text-align: center;
     border: 7px solid rgba(42, 51, 233, 0.632);
     padding: 20px;
     border-radius: 5%;
-    background-color: rgb(231, 176, 26);;
+    background-color: rgb(231, 176, 26);
+    ;
     width: 270px;
     height: 400px;
 }
@@ -144,18 +148,142 @@ h2{
     border-top: 5px solid rgb(88, 88, 208);
     padding: 5px;
 }
-.text a{
+
+.text a {
     text-decoration: none;
     color: aliceblue;
 }
-.text button{
-    
+
+.text button {
+
     height: 35px;
     background-color: rgb(68, 68, 184);
     margin-top: 10px;
 }
-.text button:hover{
+
+.text button:hover {
     background-color: rgb(81, 81, 255);
     box-shadow: 5px 5px 5px rgb(44, 44, 43);
-    
+
+}
+
+
+/* Estilo básico para el Slider*/
+#gallery {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+ }
+ 
+ .gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+ }
+ 
+ .gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+ }
+ 
+ .gallery-item iframe {
+    width: 100%;
+    height: 750px;
+    object-fit: contain; /*Escala las imagenes para que cubran el contenedor sin distorsion*/
+    display: block;
+ }
+ 
+ /* Navegación del Slider */
+ .gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 100px;
+ }
+ 
+ .nav-button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+ }
+ 
+ .nav-button:hover {
+ background-color: #005f5f;
+ }
+ 
+.d1{
+    width: 20px;
+    background-color: yellow;
+    align-items: center;
+    height: 30px;
+}
+.d2{
+    width: 10px;
+    align-content: center;
+    background-color: chocolate;
+}
+figure img{
+    width: 10rem;
+    height: 80rem;
+}
+#gallery nav button{
+    position: relative;
+    top: -85vh;
+}
+.gallery-item figcaption{
+    text-align: center;
+}
+figcaption a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 140%;
+}
+
+/*Parte del formulario*/
+input {
+    width: 80%;
+    display: block;
+    padding: 9px;
+    margin: 12px 0px;
+    box-sizing: border-box;
+    border: none;
+    border-top: 2px solid #48e;
+    background: transparent;
+    outline: none !important;
+    transition: background 0.3;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #48e;
+    transition: color 0.3;
+}
+
+input:hover {
+    background: #26a;
+}
+
+input:hover ::placeholder {
+    color: #fff;
+}
+
+input[type="submit"] {
+    width: 60%;
+    padding: 12px;
+    background: #26a;
+    color: #fff;
+    margin: 24px 0;
+    margin-bottom: 12px;
+}
+
+input[type="submit"]:hover {
+    background: #048;
+}
+
+form {
+    width: 96%;
+    background: #013;
+    padding: 30px;
 }
