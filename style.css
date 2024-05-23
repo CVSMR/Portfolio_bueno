@@ -269,6 +269,35 @@ input:hover ::placeholder {
     color: #fff;
 }
 
+textarea{
+    width: 80%;
+    display: block;
+    padding: 9px;
+    margin: 12px 0px;
+    box-sizing: border-box;
+    border: none;
+    border-top: 2px solid #48e;
+    background: transparent;
+    outline: none !important;
+    transition: background 0.3;
+    color: #fff;
+}
+textarea::placeholder {
+    color: #48e;
+    transition: color 0.3;
+}
+
+textarea:hover {
+    background: #26a;
+}
+
+textarea:hover ::placeholder {
+    color: #fff;
+}
+
+
+
+
 input[type="submit"] {
     width: 60%;
     padding: 12px;

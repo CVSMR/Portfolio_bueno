@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./recursos/Icono.png">
     <script src="./fun.js" defer></script>
+    <!-- Esta parte es para que el formulario pueda enviar correos a mi cuenta a traves de una API "Email JS"-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("dtyaP7Xn4SpczV0B5");
+        })();
+    </script><!--Ahora tenemos que irnos al js pra que fufe de verda, esta en la ulitma parte del js-->
 </head>
 
 <body>
@@ -92,7 +99,7 @@
                 <!-- <img src="./recursos/reloj.png" alt="Imagen 3"> -->
                 <!-- <figcaption><a href="../../cuenta atras Raul/reloj.html" target="_blank">Cuenta Atras</a></figcaption> -->
             </figure>
-           
+
         </div>
         <nav class="gallery-navigation">
             <button class="nav-button prev-button">Anterior</button>
@@ -105,11 +112,14 @@
 
     <!--Ultima parte de mi pagina y lo que irá casi al final de la pagina-->
     <form action="" id="formu">
-        <input type="text" placeholder="Nombre" id="nombre" required><br>
-        <input type="email" placeholder="mail" id="mail"><br>
+        <input type="text" placeholder="name" name="Nombre" id="name" autocomplete="name" required><br>
+        <input type="email" placeholder="Email" name="Email" id="email" autocomplete="email"><br>
+        <input type="text" placeholder="asunto" name="Asunto" id="asunto" autocomplete="off"><br>
         <!-- La pare del telefono tiene como parmetros poner un 6 y luego 2 numeros espacio 3 numeros espacio y por ultimo otros 3 numeros-->
-        <input type="tel" placeholder="numero rial" pattern="[6][0-9]{2} [0-9]{3} [0-9]{3}" id="telef"><br>
-        <input type="submit" value="Solicita" id="btn-enviar">
+        <input type="tel" placeholder="numero rial" pattern="[6][0-9]{2} [0-9]{3} [0-9]{3}" id="telefono" autocomplete="tel"><br>
+        <textarea name="Escirbe el cuerpo del mensaje" id="mensaje" name="mensaje"
+            placeholder="Escribe aqui lo que me quieras comunicar" autocomplete="off"></textarea>
+        <input type="submit" value="Solicita"  id="btn-enviar">
     </form>
 </body>
 

@@ -26,7 +26,7 @@ iconoElement.addEventListener("mouseleave", function () {
    this.src = iconoNormal;
 });
 // Parte para cerrar la barra de navegacion
-cerrar.addEventListener('click', () =>{
+cerrar.addEventListener('click', () => {
    menu.style.display = 'none'
    icono.style.display = 'block'
 })
@@ -72,5 +72,36 @@ startAutoplay(3000);
 document.querySelectorAll('.nav-button').forEach(button => {
    button.addEventListener('click', stopAutoplay);
 });
+
+
+//Parte para el formulario sea capaz de enviar correos a mi cuenta personal 
+// function enviarmail(){
+//    let params = {
+//       name : document.getElementById("Nombre").value,
+//       email : document.getElementById("Email").value,
+//       asunto : document.getElementById("Asunto").value,
+//       mensaje : document.getElementById("mensaje").vlaue,
+//    }
+//    emailjs.send("service_h7dus76","template_th6iicf",params).then(alert("Email enviado con exito"));
+// }
+function enviarmail(event) {
+   event.preventDefault(); // Prevent the default form submission
+   let params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      asunto: document.getElementById("asunto").value,
+      mensaje: document.getElementById("mensaje").value,
+      telefono: document.getElementById("telefono").value,
+   };
+   console.log(params); // Añadir esto para depuración
+
+   emailjs.send("service_h7dus76", "template_th6iicf", params)
+      .then(response => {
+         console.log("SUCCESS!", response.status, response.text);
+      }, error => {
+         console.log("FAILED...", error);
+      });
+}
+document.getElementById("formu").addEventListener("submit", enviarmail);
 
 
